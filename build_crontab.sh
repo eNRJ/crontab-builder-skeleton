@@ -4,6 +4,7 @@
 crontab -l > /tmp/backup.cron
 
 env > /tmp/crontab;
+cat .env >> /tmp/crontab;
 cat ./crontab >> /tmp/crontab;
 
 crontab -u $USER /tmp/crontab;
